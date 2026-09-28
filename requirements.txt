@@ -1,0 +1,4 @@
+# Colab supplies PyTorch/CUDA; notebook checks torch >= 2.6.0.
+transformer-lens==4.0.0
+numpy==2.2.6
+matplotlib==3.10.6
