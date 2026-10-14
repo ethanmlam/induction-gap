@@ -6,8 +6,8 @@ This is **scaffolding, not a completed study**. No model results have been run o
 
 ## Run on free Colab
 
-1. Open `induction_gap.ipynb` in Google Colab. Runtime > Change runtime type > T4 GPU if available. A GPU is strongly recommended; no model training or paid compute is required.
-2. Run all cells in order. The first cell installs exact direct-package versions. Restart the runtime if Colab asks, then rerun from the top. The notebook can also run as a standalone upload without cloning this folder.
+1. [Open `induction_gap.ipynb` in Google Colab](https://colab.research.google.com/github/ethanmlam/induction-gap/blob/main/induction_gap.ipynb). Runtime > Change runtime type > T4 GPU if available. A GPU is strongly recommended; no model training or paid compute is required.
+2. Run all cells in order. The first code cell installs exact direct-package versions, including `transformer-lens==3.9.0` for the notebook's `HookedTransformer` API (not TransformerLens 4.0). Restart the runtime if Colab asks, then rerun from the top. The notebook can also run as a standalone upload without cloning this folder.
 3. First use `N_PER_SEED = 8`, `SEEDS = (11,)` as a smoke test. Then restore the declared settings for the actual run. Do not use smoke-test plots as results.
 4. The notebook saves `results.csv`, `head_scores.csv`, `gap_plot.png`, and `run_metadata.json` locally. Download them from Colab's Files pane. Keep the raw data, output notebook, code version, runtime package versions, and failed runs together when making a public repo.
 5. On CPU, lower batch size and expect a slower run. On free Colab, a GPU is subject to availability and session limits; the exact wall time has not been tested here.
